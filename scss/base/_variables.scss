@@ -1,0 +1,38 @@
+
+//Discriptive color variables
+
+$monza     : #D40B0B;
+$white     : #fff ;
+$black     : #000;
+$gray      : #333;
+
+//Functional color variables
+
+$color-base : $monza;
+$color-pri  : $black;
+$color-sec  : $gray;
+
+$text-color       : $white;
+$text-color-light : $gray;
+
+//Font-Stack variables
+
+$stack-sans-serif : sans-serif;
+$stack-FugzaOne   : Fugaz-one, $stack-sans-serif;
+$stack-Belleza    : Belleza, $stack-sans-serif;
+$stack-Fred       : FredrickaTheGreat, $stack-sans-serif; 
+
+//Font-Size
+
+$font-size1  : 1em;
+$font-size2  : 1.15em;
+
+// Border-Radius
+
+$radius-main  : 10px;
+
+
+// Asset paths
+
+$path-img  : "../img";
+$path-fonts : "../fonts";

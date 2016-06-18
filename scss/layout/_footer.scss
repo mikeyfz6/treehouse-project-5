@@ -1,0 +1,68 @@
+
+/*-- Footer --*/
+
+.footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 0;
+	padding-top: 40px;
+	background-color: $color-sec;
+		@include br(med) {
+			display: flex;
+			flex-direction: row;
+  			justify-content: space-around;
+		}
+}
+
+.sub-name {
+	align-self: flex-start-center;
+	font-size: 1em;
+	margin: 10px 0 50px 20px;
+	padding-left: 20px;
+		@include br(med) {
+			padding-bottom: 20px;
+		}
+
+}
+
+ .top {
+ 	align-self: flex-end;
+	font-size: .7em;
+	margin: 10px 20px 50px 0;
+	padding-right: 20px;
+		@include br(med) {
+			display: none;
+		}
+}
+.sub-nav {
+	& a {
+		text-transform: uppercase;
+		font-size: .8em;
+	}
+		& a:hover {
+		color: $color-pri ;
+	}
+	& li {
+		@include br(med) {
+			display: inline-block;
+		 	padding: 10px 15px;
+		}
+	}
+	
+	& {
+		display: none;
+			@include br(med) {
+				display: flex;
+			}
+	}
+		.top {
+			& {
+			text-transform: uppercase;
+			font-size: .8em;
+			}
+			& a:hover {
+			color: $color-pri ;
+		}
+	}
+}

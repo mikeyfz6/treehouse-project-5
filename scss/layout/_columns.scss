@@ -1,0 +1,116 @@
+
+/*-- Gallery --*/
+
+.gallery {
+	& {
+		@extend %centered;
+		@extend %margin-auto;
+		@extend %clearfix;
+		max-width: 95%;
+		background: $color-pri;
+		padding: 40px;
+		border-radius: $radius-main;
+			@include br(med) {
+				max-width: 95%;
+				margin: 40px auto;
+			}
+}
+	& h2 {
+		@extend %margin-auto;
+		font-size: 2em;
+		padding: 30px;
+		margin: 20px 20px;
+		text-decoration: underline;
+		letter-spacing: .1em
+}
+
+	& li h3 {
+		padding-top: 20px;
+
+}
+	& li p {
+		padding-bottom: 15px;
+}
+	& li {
+		width: 90%;
+		margin: 5%;
+		padding-top: 20px;
+		overflow: hidden;
+			@include br(med) {
+				width: 45%;
+				margin: 2.5%;
+				padding-top: 4px;
+				float:left;
+					@include br(lrg) {
+						width: 28.333%;
+						padding-top: 20px;
+						float:left;
+					}
+			}
+	
+}
+	& li:nth-child(2n+1){
+		@include br(med) {
+			clear:left;
+				@include br(lrg) {
+					clear: none;
+				}
+		}
+	}
+	& li:nth-child(4) {
+		@include br(lrg) {
+			clear: left;
+		}
+	}
+	& li img {
+		border-radius: $radius-main;
+	}
+
+ 	& li:hover {
+		background-color: $text-color-light;
+
+}
+}
+
+
+
+
+
+/* =====================
+CONTACT PAGE
+========================*/
+
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 80px auto;
+	max-width:85%;
+	border-radius: $radius-main;
+	background: $color-pri;
+	padding:40px;
+	font-size: .9em;
+}
+.contact-info {
+	& {
+	  list-style: none;
+	  margin: 0;
+	  padding: 0;
+	  font-size: .8em;
+	  	@include br(med) {
+	  		font-size: 1.2em;
+	  	}
+}
+
+	& a {
+	  display: inline-flex;
+	  color: $white;
+	  min-height: 20px;
+	  background-repeat: no-repeat;
+	  background-size: 20px 20px;
+	  padding: 0 0 0 40px;
+	  margin: 0 0 20px;
+}
+
+}

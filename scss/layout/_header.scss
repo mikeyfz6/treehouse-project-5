@@ -1,0 +1,72 @@
+
+.main {
+	&-nav {
+		@extend %centered;
+		background: $color-pri ;
+		color: #fff;
+		padding: 10px;
+			@include br(med) {
+				display: flex;
+				flex-direction: column;
+	 			align-items: center;
+	 				@include br(lrg) {
+	 					flex-direction: row;
+						justify-content: space-around;
+						}
+	 			}
+			}
+	
+    &-name {
+			font-size: 2em;
+			margin: 0;
+			padding: 20px 0 20px 5px;
+				@include br(med) {
+					font-size: 2em;
+					margin-bottom: 5px;
+						@include br(lrg) {
+							font-size: 2.2em;
+							padding: 10px 0 0 20px;
+							margin-left: 20px;
+						}
+				}
+		}
+	}
+
+.nav {
+	@include br(med) {
+		display: flex;
+	}
+}
+
+.nav li {
+	display: none;
+	background: $color-pri ;
+		@include br(med) {
+			display: flex;
+		}
+			@include br(lrg) {
+				font-size: 1.25em;
+
+			}								
+}
+.name a,
+.nav a {
+	@extend %centered;
+	display: inline-flex;
+	padding: 14px 16px;
+	text-transform: uppercase;
+}
+.nav a:hover {
+	color:$text-color-light;
+}
+.nav-icon {
+		display: flex;
+		flex-direction: row;
+		padding:30px;
+			@include br(med) {
+				display: none;
+			}
+
+}
+
+

@@ -1,0 +1,38 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+	@include fonts($stack-FugzaOne,$font-size1, $text-color, bold);
+  	max-width: 100%;
+	line-height: 1.5;
+	background: $color-base;
+	margin:0;
+}
+p {
+	@include fonts($stack-Belleza,$font-size2);
+	margin-bottom: 1.8em;
+	
+}
+
+h2,
+h3,
+a {
+	color: $text-color;
+}
+
+h2,
+h3 {
+	@include fonts($stack-FugzaOne);
+	margin-top: 0;
+	letter-spacing: .1em;
+}
+
+a {
+	text-decoration: none;
+}
+img {
+	max-width: 100%;
+}
+
