@@ -545,7 +545,7 @@ img {
 
 .nav-icon {
   display: flex;
-  flex-direction: row;
+  border-radius: 10px;
   padding: 30px; }
   @media screen and (min-width: 768px) {
     .nav-icon {
@@ -566,7 +566,6 @@ img {
       justify-content: space-around; } }
 
 .sub-name {
-  align-self: flex-start-center;
   font-size: 1em;
   margin: 10px 0 50px 20px;
   padding-left: 20px; }

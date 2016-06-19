@@ -1,4 +1,5 @@
-$(".nav-icon").on("click", function(){
+$(".nav-icon").on("click", function(e){
+	e.preventDefault();
 	$(".nav li").slideToggle();
 });
 

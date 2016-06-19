@@ -61,7 +61,8 @@
 }
 .nav-icon {
 		display: flex;
-		flex-direction: row;
+		//flex-direction: row;
+		border-radius: $radius-main;
 		padding:30px;
 			@include br(med) {
 				display: none;
