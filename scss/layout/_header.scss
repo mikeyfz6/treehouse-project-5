@@ -18,7 +18,7 @@
 			
 	
     &-name {
-			font-size: $font-6;
+			font-size: $font-2;
 			margin: 0;
 			padding: 20px 0 20px 5px;
 				@include br(med) {
@@ -46,7 +46,7 @@
 			display: flex;
 		}
 			@include br(lrg) {
-				font-size: $font-2;
+				font-size: $font-3;
 
 			}								
 }
