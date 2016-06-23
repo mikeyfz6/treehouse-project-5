@@ -153,7 +153,6 @@ dfn {
  * Known issue: no IE 6/7 normalization.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -405,8 +404,6 @@ input[type="radio"] {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -498,13 +495,18 @@ img {
   padding: 10px; }
   @media screen and (min-width: 768px) {
     .main-nav {
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: column;
-      align-items: center; } }
+      -ms-flex-direction: column;
+          flex-direction: column;
+      -ms-flex-align: center;
+          align-items: center; } }
   @media screen and (min-width: 1024px) {
     .main-nav {
-      flex-direction: row;
-      justify-content: space-around; } }
+      -ms-flex-direction: row;
+          flex-direction: row;
+      -ms-flex-pack: distribute;
+          justify-content: space-around; } }
 .main-name {
   font-size: 1.5em;
   margin: 0;
@@ -521,6 +523,7 @@ img {
 
 @media screen and (min-width: 768px) {
   .nav {
+    display: -ms-flexbox;
     display: flex; } }
 
 .nav li {
@@ -528,6 +531,7 @@ img {
   background: #000; }
   @media screen and (min-width: 768px) {
     .nav li {
+      display: -ms-flexbox;
       display: flex; } }
   @media screen and (min-width: 1024px) {
     .nav li {
@@ -535,6 +539,7 @@ img {
 
 .name a,
 .nav a {
+  display: -ms-inline-flexbox;
   display: inline-flex;
   padding: 14px 16px;
   text-transform: uppercase; }
@@ -543,6 +548,7 @@ img {
   color: #333; }
 
 .nav-icon {
+  display: -ms-flexbox;
   display: flex;
   padding: 30px; }
   @media screen and (min-width: 768px) {
@@ -551,17 +557,23 @@ img {
 
 /*-- Footer --*/
 .footer {
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
   margin: 0;
   padding-top: 40px;
   background-color: #333; }
   @media screen and (min-width: 768px) {
     .footer {
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: row;
-      justify-content: space-around; } }
+      -ms-flex-direction: row;
+          flex-direction: row;
+      -ms-flex-pack: distribute;
+          justify-content: space-around; } }
 
 .sub-name {
   font-size: 0.83em;
@@ -573,7 +585,8 @@ img {
       font-size: 1em; } }
 
 .top {
-  align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   font-size: 0.83em;
   margin: 10px 20px 50px 0;
   padding-right: 20px; }
@@ -594,6 +607,7 @@ img {
   display: none; }
   @media screen and (min-width: 768px) {
     .sub-nav {
+      display: -ms-flexbox;
       display: flex; } }
 .sub-nav .top {
   text-transform: uppercase;
@@ -609,6 +623,7 @@ img {
   padding: 15px 0; }
   @media screen and (min-width: 768px) {
     .row {
+      display: -ms-flexbox;
       display: flex; } }
   @media screen and (min-width: 1024px) {
     .row {
@@ -616,14 +631,16 @@ img {
 
 @media screen and (min-width: 768px) {
   .col {
-    flex: 1 50%;
+    -ms-flex: 1 50%;
+        flex: 1 50%;
     margin-left: 100px; } }
 
 .text {
   font-weight: bold; }
   @media screen and (min-width: 768px) {
     .text {
-      order: -1;
+      -ms-flex-order: -1;
+          order: -1;
       font-size: 1em;
       font-weight: bold; } }
   @media screen and (min-width: 1024px) {
@@ -707,10 +724,14 @@ img {
 CONTACT PAGE
 ========================*/
 .card {
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
   margin: 80px auto;
   max-width: 85%;
   border-radius: 10px;
@@ -732,6 +753,7 @@ CONTACT PAGE
     .contact-info {
       font-size: 1.17em; } }
 .contact-info a {
+  display: -ms-inline-flexbox;
   display: inline-flex;
   color: #fff;
   min-height: 20px;
@@ -770,5 +792,3 @@ CONTACT PAGE
   background-image: url("../img/twittericon-1.png"); }
 .contact-info a:hover {
   color: #333; }
-
-/*# sourceMappingURL=application.css.map */
